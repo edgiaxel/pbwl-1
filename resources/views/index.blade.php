@@ -49,7 +49,7 @@
             display: none;
             padding-top: 10px;
             font-style: italic;
-            border-top: 1px dashed #ccc;
+            border-top: 2px dashed #ccc;
             margin-top: 10px;
         }
     </style>
