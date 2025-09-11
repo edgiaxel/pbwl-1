@@ -50,7 +50,7 @@
             padding-top: 10px;
             font-style: italic;
             border-top: 2px dashed #ccc;
-            margin-top: 10px;
+            margin-top: 11px;
         }
     </style>
 </head>
