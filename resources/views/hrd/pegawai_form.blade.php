@@ -13,7 +13,7 @@
     <div class="card p-4 shadow-sm" style="width: 100%; max-width: 800px;">
         <h1 class="text-center text-primary mb-4">
             @if (isset($pegawai))
-            Form Edit Pegawai
+            Form Edit Pegawaii
             @else
             Form Tambah Pegawai
             @endif
