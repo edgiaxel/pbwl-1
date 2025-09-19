@@ -17,6 +17,7 @@ return new class extends Migration {
             $table->text('alamat')->nullable();
             $table->decimal('gaji', 10, 2);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
