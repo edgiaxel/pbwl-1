@@ -15,7 +15,7 @@
             @if (isset($pegawai))
             Form Edit Pegawai
             @else
-            Form Tambah Pegawai
+            Form Tambah Pegawaii
             @endif
         </h1>
         <hr>
