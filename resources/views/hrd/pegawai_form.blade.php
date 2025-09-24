@@ -1,3 +1,4 @@
+@section('title', 'Tambah Pegawai')
 <!DOCTYPE html>
 <html lang="id">
 
@@ -13,16 +14,16 @@
     <div class="card p-4 shadow-sm" style="width: 100%; max-width: 800px;">
         <h1 class="text-center text-primary mb-4">
             @if (isset($pegawai))
-                Form Edit Pegawai
+            Form Edit Pegawai
             @else
-                Form Tambah Pegawai
+            Form Tambah Pegawai
             @endif
         </h1>
         <hr>
         <form action="{{ isset($pegawai) ? url('/pegawai/' . $pegawai->id) : url('/pegawai') }}" method="POST">
             @csrf
             @if (isset($pegawai))
-                @method('PUT')
+            @method('PUT')
             @endif
 
             <div class="mb-3">
@@ -31,9 +32,9 @@
                     class="form-control @error('nama_lengkap') is-invalid @enderror"
                     value="{{ old('nama_lengkap', $pegawai->nama_lengkap ?? '') }}">
                 @error('nama_lengkap')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
                 @enderror
             </div>
 
@@ -43,9 +44,9 @@
                     class="form-control @error('jabatan') is-invalid @enderror"
                     value="{{ old('jabatan', $pegawai->jabatan ?? '') }}">
                 @error('jabatan')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
                 @enderror
             </div>
 
@@ -54,9 +55,9 @@
                 <input type="email" id="email" name="email" class="form-control @error('email') is-invalid @enderror"
                     value="{{ old('email', $pegawai->email ?? '') }}">
                 @error('email')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
                 @enderror
             </div>
 
@@ -65,9 +66,9 @@
                 <input type="text" id="no_hp" name="no_hp" class="form-control @error('no_hp') is-invalid @enderror"
                     value="{{ old('no_hp', $pegawai->no_hp ?? '') }}">
                 @error('no_hp')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
                 @enderror
             </div>
 
@@ -77,9 +78,9 @@
                     class="form-control @error('tanggal_lahir') is-invalid @enderror"
                     value="{{ old('tanggal_lahir', $pegawai->tanggal_lahir ?? '') }}">
                 @error('tanggal_lahir')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
                 @enderror
             </div>
 
@@ -88,9 +89,9 @@
                 <textarea id="alamat" name="alamat"
                     class="form-control @error('alamat') is-invalid @enderror">{{ old('alamat', $pegawai->alamat ?? '') }}</textarea>
                 @error('alamat')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
                 @enderror
             </div>
 
@@ -100,9 +101,9 @@
                     class="form-control @error('gaji') is-invalid @enderror"
                     value="{{ old('gaji', $pegawai->gaji ?? '') }}">
                 @error('gaji')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
                 @enderror
             </div>
 

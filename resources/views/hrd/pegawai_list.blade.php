@@ -1,6 +1,6 @@
-<div>
-    <!-- Live as if you were to die tomorrow. Learn as if you were to live forever. - Mahatma Gandhi -->
-</div>
+@extends('layouts.app')
+@section('title', 'Daftar Pegawai')
+@section('content')
 <!DOCTYPE html>
 <html lang="id">
 
@@ -13,6 +13,8 @@
 </head>
 
 <body class="bg-light p-4">
+
+
     <div class="container mt-4">
         <h1 class="text-center text-primary mb-4 font-weight-bolder" id="judul-utama">Daftar Pegawai HRD</h1>
         <a href="{{ url('/pegawai/tambah') }}" class="btn btn-success mb-3">Tambah Pegawai Baru</a>
@@ -64,3 +66,4 @@
 </body>
 
 </html>
+@endsection
