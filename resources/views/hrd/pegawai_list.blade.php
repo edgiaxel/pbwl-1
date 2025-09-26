@@ -23,6 +23,7 @@
                 <thead class="table-dark">
                     <tr>
                         <th>No</th>
+                        <th>Foto</th>
                         <th>Nama Lengkap</th>
                         <th>Jabatan</th>
                         <th>Email</th>
@@ -37,6 +38,11 @@
                     @foreach ($pegawai as $p)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
+                        <td>
+                            <img src="{{ $p->profile_picture ? asset('storage/' . $p->profile_picture) : asset('images/placeholder.jpg') }}"
+                                alt="{{ $p->nama_lengkap }}" class="rounded-circle"
+                                style="width: 50px; height: 50px; object-fit: cover;">
+                        </td>
                         <td>{{ $p->nama_lengkap }}</td>
                         <td>{{ $p->jabatan }}</td>
                         <td>{{ $p->email }}</td>

@@ -18,5 +18,6 @@ class Pegawai extends Model
         'tanggal_lahir',
         'alamat',
         'gaji',
+        'profile_picture',
     ];
 }

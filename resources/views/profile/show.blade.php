@@ -24,10 +24,19 @@
                     </div>
                     @endif
 
-                    <form method="POST" action="{{ route('profile.update') }}">
+                    <form method="POST" action="{{ route('profile.update') }}" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
+                        <div class="mb-3 text-center">
+                            <img src="{{ Auth::user()->profile_picture ? asset('storage/' . Auth::user()->profile_picture) : asset('images/placeholder.jpg') }}"
+                                alt="Profile Picture" class="rounded-circle mb-3"
+                                style="width: 120px; height: 120px; object-fit: cover;">
 
+                            <label for="profile_picture"
+                                class="form-label d-block">{{ __('Upload Profile Picture') }}</label>
+                            <input id="profile_picture" type="file" class="form-control" name="profile_picture"
+                                accept="image/*">
+                        </div>
                         <div class="mb-3">
                             <label for="name" class="form-label">{{ __('Name') }}</label>
                             <input id="name" type="text" class="form-control" name="name"

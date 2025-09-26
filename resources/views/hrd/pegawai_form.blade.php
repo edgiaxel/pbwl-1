@@ -24,7 +24,8 @@
             @endif
         </h1>
         <hr>
-        <form action="{{ isset($pegawai) ? url('/pegawai/' . $pegawai->id) : url('/pegawai') }}" method="POST">
+        <form action="{{ isset($pegawai) ? url('/pegawai/' . $pegawai->id) : url('/pegawai') }}" method="POST"
+            enctype="multipart/form-data">
             @csrf
             @if (isset($pegawai))
             @method('PUT')
@@ -109,6 +110,23 @@
                     {{ $message }}
                 </div>
                 @enderror
+            </div>
+
+            <div class="mb-3">
+                <label for="profile_picture" class="form-label">Foto Pegawai:</label>
+                @if (isset($pegawai) && $pegawai->profile_picture)
+                <p>Current Photo:</p>
+                <img src="{{ asset('storage/' . $pegawai->profile_picture) }}" alt="Current Photo"
+                    style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;" class="mb-2">
+                @endif
+                <input type="file" id="profile_picture" name="profile_picture"
+                    class="form-control @error('profile_picture') is-invalid @enderror" accept="image/*">
+                @error('profile_picture')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
+                <small class="form-text text-muted">Abaikan jika tidak ingin mengubah foto.</small>
             </div>
 
             <button type="submit" class="btn btn-success w-100 mb-2">Simpan</button>
