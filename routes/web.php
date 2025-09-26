@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -32,4 +33,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/pegawai/history', [PegawaiController::class, 'history']);
     Route::put('/pegawai/{id}/restore', [PegawaiController::class, 'restore']);
     Route::delete('/pegawai/{id}/force-delete', [PegawaiController::class, 'forceDelete']);
+    Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
+    Route::put('/profile', [ProfileController::class, 'update'])->name('profile.update');
+
 });

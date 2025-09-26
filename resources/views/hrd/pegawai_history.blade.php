@@ -12,7 +12,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body class="bg-light p-4">
+<body class="bg-light">
     <div class="container mt-4">
         <h1 class="text-center text-primary mb-4 font-weight-bolder">Riwayat Hapus Pegawai</h1>
         <a href="{{ url('/pegawai') }}" class="btn btn-secondary mb-3">Kembali ke Daftar Pegawai</a>
